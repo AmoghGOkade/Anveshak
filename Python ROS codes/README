@@ -1,0 +1,3 @@
+This is for python ROS codes we used for Galileo and Rover H (till ARC), that is, till our 1st tenure.
+
+which_wheel.py is for checking which wheel moves for which index of the array sent to the ESP and which sign makes it move in which direction. This is mainly for helping change the ESP code to standardize the signs and indices (like +ve for front, etc.) (convention written in the file) going to the ESP code.
