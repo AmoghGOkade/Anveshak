@@ -8,7 +8,7 @@
 #define speed_quantization 28
 #define str_spee 255
 #define how_slow_print 3
-//#define q_size 5      //for moving avg filter for smoothened motion of rover, set to 1 to remove this feature
+#define q_size 5      //for moving avg filter for smoothened motion of rover, set to 1 to remove this feature
 
 uint8_t before_first = 0;
 uint8_t before_second = 0;
@@ -189,12 +189,12 @@ void loop()
   before_first = first;
   before_second = second;
 
-//  for (int i=0; i<q_size-1; i++) que[i] = que[i+1];     //remove 1st value (left shift all q elements)
-//  que[q_size] = spee;     //append to q
-//
-//  spee = 0;     //to find avg pwm
-//  for (int i=0; i<q_size; i++) spee+=que[i];
-//  spee = spee/q_size;
+  for (int i=0; i<q_size-1; i++) que[i] = que[i+1];     //remove 1st value (left shift all q elements)
+  que[q_size] = spee;     //append to q
+
+  spee = 0;     //to find avg pwm
+  for (int i=0; i<q_size; i++) spee+=que[i];
+  spee = spee/q_size;
 
   for (int i=0; i<num_motors/2; i++) myData.pwm[i] = dir[i]*spee;
   for (int i=num_motors/2; i<num_motors; i++) myData.pwm[i] = dir[i]*str_spee;
