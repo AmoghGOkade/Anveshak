@@ -62,3 +62,5 @@ Files -
 
 Drive_ESP_S3_Code_Serial_Monitor:- Code capable of switching between normal ROS operation and ESPNOW operation (the espnow commands being sent from the serial monitor).
 Serial_Monitor_Sender_test:- Sending espnow commands for moving the rover, controlled by the operator via the serial monitor.
+Drive_ESP_S3_Keyboard:- Code capable of switching between normal ROS operation and ESPNOW operation (the espnow commands being sent from a USB keyboard).
+USB_Keyboard_Sender:- Sending espnow commands for moving the rover, controlled by the operator via a USB keyboard.
