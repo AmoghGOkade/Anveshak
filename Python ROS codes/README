@@ -1,3 +1,7 @@
 This is for python ROS codes we used for Galileo and Rover H (till ARC), that is, till our 1st tenure.
 
 which_wheel.py is for checking which wheel moves for which index of the array sent to the ESP and which sign makes it move in which direction. This is mainly for helping change the ESP code to standardize the signs and indices (like +ve for front, etc.) (convention written in the file) going to the ESP code.
+
+bevel_arm.py is the arm code for rover H. It is different from the normal run.py because the bevel gear is designed in such a way that 2 motors need to have the same and opposite velocity for pitch and roll to happen respectively.
+
+Full_potential_steering.py is the drive + steering code for rover H, which has most useful steering features (including individual control). It is supposed to (mostly) be unchanged, except for changing the list indices of the subscribed encoder topic and signs when hardware changes are made.
