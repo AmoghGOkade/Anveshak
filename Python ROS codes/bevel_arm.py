@@ -17,13 +17,13 @@ class Node:
         outbuff = [0, 0, 0, 0, 0, 0]
         
         axes = [ int (msg.axes[i] * 0xFF) for i in range(5) ]
-        buttons = [ (msg.buttons[1] - msg.buttons[3])*255]
+        buttons = [ (msg.buttons[1] - msg.buttons[3])*255]    #button 1 is for forward and 3 is for backward of a motor
         buttons.append((msg.buttons[0] - msg.buttons[4])*255)
         
         outbuff[0] = - axes[0]
         outbuff[1] = axes[1]
         outbuff[2] = axes[3]
-        outbuff[3] = buttons[1] - buttons[0]
+        outbuff[3] = buttons[1] - buttons[0]    #exclusively for that bevel gear, for pitch, (outbuff[3],outbuff[5]) needs to be (1,1) for forward and (-1,-1) for backward and for roll, (1,-1) and (-1,1)
         outbuff[4] = axes[2]
         outbuff[5] = buttons[1] + buttons[0]
         
