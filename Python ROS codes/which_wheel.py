@@ -7,7 +7,7 @@ Do not pay any attention to the joystick axes or to the sign of the published in
 
 #no change in sign is to be made in python codes to adjust for change in hardware, make sure that the array corresponds to [fl_dr,fr_dr,bl_dr,br_dr,fl_str,fr_str,bl_str,br_str] and + corresponds to front (for drive) or right (for steering) for each and every wheel in the rostopic motor_pwm. Any inconsistency should be corrected in the .ino file only!
 #encoder sign cannot be adjusted for in the .ino file or the hardware, due to hardware inconsistencies in the 6 channels, so make sure to keep right as +ve for that respective encoder in the array in the python drive code (by changing the signs in its encoder callback). Also make sure that the array corresponds to [fl,fr,bl,br]
-
+#str pwm is capped at 127 in this python code
 
 #!/usr/bin/env python3
 import rospy
@@ -30,6 +30,7 @@ class Drive:
         self.drive_mode = True
         self.dr_pwm = [0,0,0,0]
         self.str_pwm = [0,0,0,0]
+        self.max_str_pwm = 127
 
         self.prints_per_iter = 1
         self.print_ctrl = self.prints_per_iter
@@ -72,7 +73,7 @@ class Drive:
         if (self.drive_mode == True):
             self.pwm_msg.data = [int(30*self.dr_pwm[0]), int(30*self.dr_pwm[1]), int(30*self.dr_pwm[2]), int(30*self.dr_pwm[3]), 0, 0, 0, 0]
         else:
-            self.pwm_msg.data = [0, 0, 0, 0, int(255*self.str_pwm[0]), int(255*self.str_pwm[1]), int(255*self.str_pwm[2]), int(255*self.str_pwm[3])]
+            self.pwm_msg.data = [0, 0, 0, 0, int(self.max_str_pwm*self.str_pwm[0]), int(self.max_str_pwm*self.str_pwm[1]), int(self.max_str_pwm*self.str_pwm[2]), int(self.max_str_pwm*self.str_pwm[3])]
 
         self.pwm_msg.layout = MultiArrayLayout()
         self.pwm_msg.layout.data_offset = 0
