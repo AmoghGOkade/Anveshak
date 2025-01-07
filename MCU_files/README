@@ -29,7 +29,7 @@ The Johnson motor worked with ROS, but did not work in the code having 'sensors+
 This however, randomly got solved (Johnson motor would work even after sensor data was obtained). This was mostly because we removed the DS18B20 from pin 35 (INPUT only pin) and attached it to pin 13 (GPIO) (we had already changed INPUT pin 34 to GPIO 21), maybe due to issues arising with the INPUT only pin when it was asked to send an ACK.
 I also remember that this issue came back the day before the mission because we wrote to a pin different from the one that the motor was connected to, but when we fixed it, the issue went.
 
-If the data types (even bit length) of the published variable in GUI and the recieved variable in the arduino code doesn't match, things might not work eg: Servo, Stepper.
+If the data types (even bit length) of the published variable in GUI and the recieved variable in the arduino code doesn't match, things might not work eg: Servo, Stepper (Float32 was sent, but Float64 was received). In the .ino file though, we can store the received data in a variable of any data-type. 
 
 Don't use brv8825, it is a bad motor driver, use A4988. I am pretty sure it is a plug-in replacement.
 
