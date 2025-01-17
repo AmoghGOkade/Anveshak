@@ -1,4 +1,6 @@
 //Final as of 19.9.24
+//Things that may need to be changed in this github (only with hardware changes) - ENC_CALIB and defaultdir[NUM_Motor]
+//In the new PCB, 24V is given to steering, which has to be capped using the variable in the python drive codes
 
 #include<ros.h>
 #include<std_msgs/Float32MultiArray.h>
@@ -9,10 +11,24 @@
 #define NUM_Motor 8
 #define ENC_Calib 360/562000
 
-int PWMpin[NUM_Motor] = {18,37,9,35,13,20,11,47};   //front two, followed by back two, LRLR   //47 becomes 33 for S2 and 48 becomes 34
-int dirpin[NUM_Motor] = {8,36,10,48,14,19,12,21};   //first four are drive.
+//out of the 8 indices, 1st 4 are drive, other 4 are steering. In the 4, it is front two, followed by back two, LRLR
+//depening on the PCB and the ESP (S2/S3), uncomment one of the below 4 and use
+
+//old PCB, ESP S3
+//int PWMpin[NUM_Motor] = {18,37,9,35,13,20,11,47};   //47 becomes 33 for S2 and 48 becomes 34
+//int dirpin[NUM_Motor] = {8,36,10,48,14,19,12,21};
+//old PCB, ESP S2
+//int PWMpin[NUM_Motor] = {18,37,9,35,13,20,11,33};
+//int dirpin[NUM_Motor] = {8,36,10,34,14,19,12,21};
+//new PCB, ESP S3
+//int PWMpin[NUM_Motor] = {40,38,36,48,9,18,16,7};
+//int dirpin[NUM_Motor] = {41,39,37,35,10,8,17,15};
+//new PCB, ESP S2
+//int PWMpin[NUM_Motor] = {40,38,36,34,9,18,16,7};
+//int dirpin[NUM_Motor] = {41,39,37,35,10,8,17,15};
+
 int defaultdir[NUM_Motor] = {0,1,0,1,0,1,0,1};  // change only when hardware changes are made to rover or to standardize python code
-int enc_dir[NUM_ENC] = {1,1,1,1,1,1};
+int enc_dir[NUM_ENC] = {1,1,1,1,1,1};  //basically not used
 
 ros::NodeHandle nh;
 
@@ -122,13 +138,6 @@ void updateEncoder5()
   if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000) enc_pos[5] ++;
   
   lastEncoded[5] = encoded; //store this value for next time
-}
-
-
-int max(int a, int b)
-{
-  if(a>b) return a;
-  else return b;
 }
 
 void setup()
