@@ -1,0 +1,18 @@
+
+./ffmpeg -f v4l2 -input_format mjpeg -i /dev/video0 -r 200 -b:v 2000k -s 640x640 -c:v libx264 -f mpegts -flush_packets 1 -preset ultrafast -tune zerolatency udp://127.0.0.1:1235?pkt_size=1024
+
+./srt-live-transmit udp://:1235 srt://:4202 -v
+
+ffplay -probesize 32 -sync ext srt://10.42.0.51:4202 -fflags nobuffer -flags low_delay -framedrop
+
+#first 1 in xavier in ~/gst_pranav/ffmpeg-6.1 
+#2nd in ~/gst_pranav/srt... also in xavier 
+#last one in laptop in ~/ffmpeg
+
+#in ffmpeg command, change video0 to video2 and 1235->1236
+#in ffplay command, 4202->4203
+#in srt command, 1235->1236 and 4202->4203
+
+#use video0, video2, video4, ...
+
+#ls /dev/vid* to see whether cam appears or not (in xavier terminal if camera is connected to xavier)
