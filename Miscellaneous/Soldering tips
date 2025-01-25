@@ -1,0 +1,33 @@
+General guidelines:-
+Soldering is mostly about Sisthu (being methodical I guess). Get into a groove of processes and follow the same for that session, with any added improvements if needed.
+Don't leave unsatisfied. If you have performed your best and the best still leads to a bad final product, there is some issue with component selection. Change immediately.
+Even intermediate solderers need to be able to properly solder to get a decent final product. If only an expert gets it right, there is some issue with component selection. Change immediately.
+
+
+
+Accessories:-
+Do not use gloves at all. They are a hindrance (won't allow you to do delicate work without taking them off); they are itchy and might not let you keep your cool while soldering; horrible to manage, people will lose them.
+Use a stripper or plier to hold connectors and hold the wire with your bare hands. The solderer holds the iron and feeds the solder. If the solderer has no solder to feed (they are working on a workpiece that already has solder), he can push in the wire if he wants.
+
+
+
+Wire to wire:-
+
+For fat wires, twist them together and point them upwards. Apply solder to the wire.
+Be sure to overcompensate the size of the sleeve, because the effective length needed to be covered is the insulation plus the joint strands.
+
+For thin wires (4pin JST wires), keeping them beside each other and applying solder actually works well and looks very clean.
+
+
+
+Use good solder.
+
+
+
+GX12 4 pin:-
+If you care about your sanity, you will not use them.
+There is an unimaginable amount of emotional stress involved in managing and/or soldering encoders for a competition you are using GX12 4 pin in.
+Outside is not the problem (it actually also is, because not any intermediate solderer can make it properly).
+The actual problem is inside. Even if a machine solders it, I can easily break apart the joint with my hand. It also takes an un-imaginable amount of tries and patience to be satisfied with the product, and with every one of them, the state of the GX and wire makes the product turn out more and more unusable.
+But if some sadistic torturer forces you to use them, do the outside one perfectly (can use 4 core shielded wire) and do not use 4 core shielded wire on the inside. Cut some wire from the back of a JST (4 pin) and use that if length extension is needed. This is if you want to preserve your sanity or keep the swears inside you.
+I have never disagreed that it is impossible to make it work for a (decently) extended period of time, but it is just not worth it when you can use the red wire on some GX16 4 pin and get it done with. Even a (relative) noob can handle the GX16 soldering and it will last at least 10000000000 times longer than the GX12 soldering (and be that much more reliable).
