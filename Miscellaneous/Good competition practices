@@ -15,3 +15,5 @@ Simple is best. But in the long run, a rover with steering and good differential
 A secondary RF module capable of running commands and 2 camera feeds might provide a sense of huge relief/security. In both the IRCs I went to, this would have increased our placement.
 
 The lesser the soldering joints, the better. Make every soldering joint that breaks during testing better.
+
+Use aliases and keep the terminals clean. The drive code terminal's data/GUI should be visible to the operators at all times. Don't use bash scripts if they are messy, aliases are sufficient if there is no perfect bash script.
