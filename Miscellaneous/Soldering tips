@@ -3,26 +3,40 @@ Soldering is mostly about Sisthu (being methodical I guess). Get into a groove o
 Don't leave unsatisfied. If you have performed your best and the best still leads to a bad final product, there is some issue with component selection. Change immediately.
 Even intermediate solderers need to be able to properly solder to get a decent final product. If only an expert gets it right, there is some issue with component selection. Change immediately.
 
+Use good solder, a good iron, good strippers, wires and sleeves of the correct thickness. For the soldering station, set the air gun to 170 for sleeves. The iron should be good at 350 (deg Celsius).
+If the final piece seems strong when tugged well, it is good enough no matter how weak it actually looks; solder doesn't need to be 100% applied in all nooks and corners.
+Especially for connector to wire soldering, strip smaller lengths always. It is never good to have extra un-insulated wire popping out of a connector.
+Never use any insulation tape. It just makes everything messy to handle. It covers up bad soldering and makes it almost impossible to desolder effectively. Sometimes it also degrades the quality of soldering. Very inelegant.
+Even to keep multiple strands of wire together, zipties can be used instead of tape.
+
+Soldering is only done well when the solderer is satisfied with the position he is soldering in; if he can't see properly or doesn't have a good angle to solder at, make sure to change positions/ angles to make him comfortable.
+
+
+PCB soldering:-
+Pretty simple, can be done alone also.
+Put pin headers wherever you can, to make the soldering modular. I don't think it is worth to solder any component directly to the PCB.
+Flux is very useful in a decent amount of places (can be done equally well without flux, but needs a lot more effort), but it makes the PCB look very shabby if it is not cleaned properly.
+When soldering wires onto the PCB (in a pad), put the wires in, bend them to hold them in place and then apply solder.
+To desolder JSTs, break the plastic off using a plier. Then take the remaining pins off one-by-one using a plier or stripper (with the solder heated using an iron on the other end). Then put the iron on top of the pad and clear the hole using a desoldering pump (sucker).
 
 
 Accessories:-
 Do not use gloves at all. They are a hindrance (won't allow you to do delicate work without taking them off); they are itchy and might not let you keep your cool while soldering; horrible to manage, people will lose them.
 Use a stripper or plier to hold connectors and hold the wire with your bare hands. The solderer holds the iron and feeds the solder. If the solderer has no solder to feed (they are working on a workpiece that already has solder), he can push in the wire if he wants.
-
+Soldering alone - A decent amount of things can be soldered well alone (XTs). But for the camaraderie, ease of soldering and the extra brain to check for mistakes or give useful sugestions, it is always worth it to solder with 2 people. 3 people working on a single piece of soldering is messy to do and the product will likely turn out bad.
 
 
 Wire to wire:-
-
 For fat wires, twist them together and point them upwards. Apply solder to the wire.
 Be sure to overcompensate the size of the sleeve, because the effective length needed to be covered is the insulation plus the joint strands.
-
 For thin wires (4pin JST wires), keeping them beside each other and applying solder actually works well and looks very clean.
 
 
-
-Use good solder.
-
-
+Connector to wire:-
+You can never go wrong by putting the wire in the pad's hole and applying solder on top (with some seeping into the hole, because the wire doesn't fill the hole completely).
+While desoldering, if you think it can damage the pins' orientations, put the connector in its other gender and then desolder.
+To remove a wire from a connector, just keep the iron on top of the exposed wire which is in the connector pad, hold the connector (with a plier), apply slight force (too much force might pull the pad out from the connector itself) and be patient. Eventually the solder melts and the wire comes out.
+To resolder a wire, you can keep the wire partly on the pad and heat till all the solder (even inside the pad) becomes liquid. Then try pushing the wire while the iron still keeps the solder liquid. If it possible to entirely remove the old solder from the connector before putting a wire in again, that is the best, but it is only possible in a couple of connectors (Deans and XTs).
 
 GX12 4 pin:-
 If you care about your sanity, you will not use them.
@@ -31,3 +45,29 @@ Outside is not the problem (it actually also is, because not any intermediate so
 The actual problem is inside. Even if a machine solders it, I can easily break apart the joint with my hand. It also takes an un-imaginable amount of tries and patience to be satisfied with the product, and with every one of them, the state of the GX and wire makes the product turn out more and more unusable.
 But if some sadistic torturer forces you to use them, do the outside one perfectly (can use 4 core shielded wire) and do not use 4 core shielded wire on the inside. Cut some wire from the back of a JST (4 pin) and use that if length extension is needed. This is if you want to preserve your sanity or keep the swears inside you.
 I have never disagreed that it is impossible to make it work for a (decently) extended period of time, but it is just not worth it when you can use the red wire on some GX16 4 pin and get it done with. Even a (relative) noob can handle the GX16 soldering and it will last at least 10000000000 times longer than the GX12 soldering (and be that much more reliable).
+
+XT60:-
+Make sure the wire is thin enough to go into the hole, but not so thin that it snaps at the insulation.
+It is almost always worth it to keep the iron flat on top of the exposed wire for a while to spread the solder after you think sufficient solder has been applied.
+Use sleeves, not the housing.
+Can be done alone. Keep the XT under something that makes it relatively hard to move (like a wire spool). Keep the wire (partially) caught up in something (like the soldering station's wires itself). Gently touch the iron to the wire and apply solder.
+Tug well.
+In case a sleeve small enough to fit properly in the hole around the pad is not available, heat the end of the bigger sleeve to make it just small enough to fit in the hole and then shrink it after fitting it properly. This sleeve will be loose and can come out regularly, so this is not recommended.
+To desolder, remove the wire by keeping the iron on top for a while till the solder becomes liquid and slowly (with less force) pulling the wire. Then the iron can be inserted into the hole of the pad and when the solder is liquid, the connector can immediately be thrusted towards the ground to make the solder come out. Do it carefully so as to not bend the pad wrt the other pad, such that the other gender of connector doesn't fit in it.
+
+XT90:-
+Same as XT60s, but use the housing instead of the sleeve.
+
+
+Sleeves:-
+Do not buy the boxes with different sizes, there will always be a lot of wastage of the uncommon sizes. Buy the long sleeves in metres.
+To get the correct thickness, it is recommended to take a connector to the shop and see if the sleeve fits well (especially the XT60 sized sleeve, there was always a shortage).
+If there is a good and a bad side of the sleeve (well cut and not uniformly torn), make sure the good side goes into the relevant spot. A badly cut side might not fit around a connector's pad or into a wire-wire joint, while the good side might.
+
+
+Soldering at the MA, MB of motors:-
+It would be good it it was done to all motors, but it is also not worth the effort unless the wire-wire soldering comes out frequently.
+I am also not sure how important the motor cap is, because in some motors, if wires of optimal thickness are soldered to the pads, the motor cap just does not fit. But for all practical purposes, a motor can run well without the cap.
+Just place the wire above the pad and start applying solder. Then place the iron on top (without displacing the wire much) and melt the solder, letting gravity take it to the joint between the wire and pad.
+If people are not good enough to do the above process, keeping the wire beside the pad and soldering also works equally well.
+No matter how incomplete the soldering looks, if it survives a strong tug test, the soldering is good enough. It (somehow) can be very very strong without looking that strong.
