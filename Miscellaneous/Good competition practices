@@ -1,0 +1,17 @@
+Make elec box out of non-conducting material. Signals that propogated through the chassis costed us an ARC mission (more than that because we were afraid to use encoders because ESPs were burning) and caused a lot of headaches in IRC.
+
+Don't use GX12 4 pin connectors. It needs to be soldered perfectly to work reliably for a good amount of time. It took a huge toll on ARC testing and was a major reason for how ARC turned out.
+
+Don't design for single channel motor drivers if you have to operate an even number of motors. It makes wiring horrible.
+
+Don't use a 2nd layer for the elec box (L clamp). It makes the bottom layer inaccessible, no matter how much planning is done to make it a flap that can be opened. It is also not good for mental health.
+
+To win competitions, strict simulated practice is needed. Follow the rulebook, follow strict timings (absolute - say at 14:30, setup time starts, no matter what small things are left to be done). You won't win if testing starts later than planned because we were waiting for people to show up or fix some soldering or tighten grub.
+If people are not there when testing starts, do setup time and then the mission without them. If people need 2 minutes after the designated start time to plan somethings, don't give it to them, let them scramble around and see chaos during the setup time.
+Don't spoon-feed the rover and operators during these missions. The tasks will be hard during the competition and comms (camera feeds) will not be ideal. Simulate these well, and if you get opposed, either shout back, or give up on pushing for testing entirely. Cowardly testing will not get you anywhere (at least not in top 3).
+
+Simple is best. But in the long run, a rover with steering and good differential might be better than a 6 wheel rocker-bogie (kind of like how Karasuno somehow beat Shiratorizawa that time).
+
+A secondary RF module capable of running commands and 2 camera feeds might provide a sense of huge relief/security. In both the IRCs I went to, this would have increased our placement.
+
+The lesser the soldering joints, the better. Make every soldering joint that breaks during testing better.
